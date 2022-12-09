@@ -15,6 +15,7 @@
     &__logo {
         height: 3rem;
         justify-self: center;
+        
     }
 
     &__btn {
@@ -23,13 +24,36 @@
     }
 
     &__seenon-text {
+        font-size: 1.6rem;
+        color: $color-grey-light-2;
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        align-items: center;
+        grid-column-gap: 1.5rem;
+
+        &::before {
+            content: "";
+            height: 1px;
+            display: block;
+            background: currentColor;
+        }
+        &::after {
+            content: "";
+            height: 1px;
+            display: block;
+            background: currentColor;
+        }
 
     }
 
     &__seenon-logos {
-
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 3rem;
+        justify-items: center;
         img {
             height: 25px;
+            filter: brightness(70%);
         }
     }
 }
